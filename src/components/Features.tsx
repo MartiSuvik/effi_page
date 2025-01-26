@@ -1,4 +1,3 @@
-import React from 'react';
 import { Bot, Database, Users, Cog, Share2 } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useSmoothTransition } from '../hooks/useSmoothTransition';
