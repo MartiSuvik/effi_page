@@ -23,10 +23,10 @@ export const ParallaxSection = () => {
         ref={sectionRef}
         className="absolute inset-0 transition-transform duration-300 ease-out"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa')",
+          backgroundImage: "url('https://keklbemtoccmveisaxio.supabase.co/storage/v1/object/sign/media/Images/Footer.svg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJtZWRpYS9JbWFnZXMvRm9vdGVyLnN2ZyIsImlhdCI6MTczNzkxODcwMCwiZXhwIjoxNzM4MDA1MTAwfQ.3w1z8f5M6pzWI0KjExY73qXKF4SeX3Lam7PQ64XbzpA&t=2025-01-26T19%3A11%3A41.014Z')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          opacity: 0.2,
+          opacity: 0.7,
           transform: `translate3d(${mousePosition.x}px, ${mousePosition.y}px, 0)`
         }}
       />
