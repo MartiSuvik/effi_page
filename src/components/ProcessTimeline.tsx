@@ -30,7 +30,7 @@ const steps = [
 ];
 
 export const ProcessTimeline = () => {
-  const [ref, isVisible] = useIntersectionObserver();
+  const [intersectionRef, isVisible] = useIntersectionObserver();
 
   return (
     <section className="py-24 bg-gray-50">
@@ -43,11 +43,28 @@ export const ProcessTimeline = () => {
         </div>
 
         <div 
-          ref={ref} 
+          ref={intersectionRef} 
           className="max-w-6xl mx-auto relative"
         >
-          {/* Timeline line */}
-          <div className="absolute top-24 left-0 right-0 h-0.5 bg-gray-200 hidden md:block" />
+          {/* Glowing line - Desktop */}
+          <div className="absolute top-24 left-0 right-0 hidden md:block">
+            <div className="h-0.5 bg-purple-400 relative">
+              {/* Animated glow effect */}
+              <div className="absolute inset-0 animate-pulse-glow">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-line-flow" />
+              </div>
+            </div>
+          </div>
+          
+          {/* Glowing line - Mobile */}
+          <div className="absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 md:hidden">
+            <div className="w-0.5 h-full bg-purple-400 relative">
+              {/* Animated glow effect */}
+              <div className="absolute inset-0 animate-pulse-glow">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-400 to-transparent animate-line-flow-vertical" />
+              </div>
+            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             {steps.map((step, index) => (
@@ -71,10 +88,6 @@ export const ProcessTimeline = () => {
                         {step.icon}
                       </div>
                     </div>
-                    {/* Connecting line for mobile */}
-                    {index < steps.length -1 && (
-                      <div className="absolute h-12 w-0.5 bg-gray-200 left-1/2 -bottom-12 md:hidden" />
-                    )}
                   </div>
                 </div>
 
