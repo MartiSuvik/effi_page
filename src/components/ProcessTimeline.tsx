@@ -72,7 +72,7 @@ export const ProcessTimeline = () => {
                       </div>
                     </div>
                     {/* Connecting line for mobile */}
-                    {index < steps.length - 1 && (
+                    {index < steps.length -1 && (
                       <div className="absolute h-12 w-0.5 bg-gray-200 left-1/2 -bottom-12 md:hidden" />
                     )}
                   </div>

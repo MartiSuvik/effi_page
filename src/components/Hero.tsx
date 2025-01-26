@@ -19,15 +19,12 @@ export const Hero: React.FC<HeroProps> = ({ onStartFreeTrial }) => {
   return (
     <section ref={sectionRef} className="relative min-h-screen flex items-center overflow-hidden perspective-container">
       <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 to-white -z-10 gradient-animate" />
-      <div 
-        className="absolute inset-0 -z-10 transition-transform duration-300 ease-out"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1519681393784-d120267933ba')",
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          opacity: 0.1,
-          transform: `translate3d(${mousePosition.x}px, ${mousePosition.y}px, 0)`
-        }}
+      <video 
+        className="absolute inset-0 -z-10 w-full h-full object-cover"
+        src="https://keklbemtoccmveisaxio.supabase.co/storage/v1/object/sign/media/Video/home.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJtZWRpYS9WaWRlby9ob21lLm1wNCIsImlhdCI6MTczNzkyMjY4NywiZXhwIjoxNzY5NDU4Njg3fQ.YnJz1B8gkN85tH4gRwJq8ycZ5xasi_1Qymad9aS1K9I&t=2025-01-26T20%3A18%3A07.436Z"
+        autoPlay
+        loop
+        muted
       />
       
       <div className="container mx-auto px-6 py-24">
@@ -36,7 +33,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartFreeTrial }) => {
             ref={titleRef} 
             className="section-transition"
             style={{ 
-              transform: titleTransform,
+              transform: titleTransform(),
               transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)'
             }}
           >
@@ -57,7 +54,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartFreeTrial }) => {
             ref={contentRef}
             className="section-transition"
             style={{ 
-              transform: contentTransform,
+              transform: contentTransform(),
               transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s'
             }}
           >
