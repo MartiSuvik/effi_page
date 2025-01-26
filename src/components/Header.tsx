@@ -8,7 +8,7 @@ export const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
-              src="/effi-logo.png"
+              src="https://keklbemtoccmveisaxio.supabase.co/storage/v1/object/sign/media/Logo/Effi%20White.svg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJtZWRpYS9Mb2dvL0VmZmkgV2hpdGUuc3ZnIiwiaWF0IjoxNzM3OTE2OTAxLCJleHAiOjE3Njk0NTI5MDF9.xSHd8FtZR6H-njHSCy32bUNBQXWN4dt1erqWEA_1UOM&t=2025-01-26T18%3A41%3A41.200Z"
               alt="Effi"
               className="h-12 w-auto transition-transform duration-300 hover:scale-110"
             />
